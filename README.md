@@ -31,7 +31,7 @@ conda install -n base conda-forge::mamba
 Now run (changing `sqdmetal_env` to any other desired name for the virtual environment):
 
 ```bash
-mamba env create -n sqdmetal_env -f SQDMetal/env_windows.yml
+mamba env create -n sqdmetal_env -f SQDMetal/SQDMetal_env.yml
 ```
 
 Now activate the environment and install Qiskit-Metal:
