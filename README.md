@@ -28,6 +28,12 @@ To run the installation faster, first install `mamba`:
 conda install -n base conda-forge::mamba
 ```
 
+Change our .bashrc to initialise mamba each time we open the shell.
+
+```bash
+mamba shell init --shell bash --root-predix=~/.local/share/mamba
+```
+
 Now run (changing `sqdmetal_env` to any other desired name for the virtual environment):
 
 ```bash
@@ -37,8 +43,13 @@ mamba env create -n sqdmetal_env -f SQDMetal/SQDMetal_env.yml
 Now activate the environment and install Qiskit-Metal:
 
 ```bash
-activate sqdmetal_env
-pip install -e SQDMetal
+mamba activate sqdmetal_env
+```
+
+Then run the following command from within the directory containing the setup.py file.
+
+```bash
+pip install -e .
 ```
 
 This should install Qiskit-Metal and SQDMetal.
